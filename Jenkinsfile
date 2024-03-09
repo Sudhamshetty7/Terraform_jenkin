@@ -17,7 +17,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 script {
-                    sh 'terraform plan -auto-approve'
+                    sh 'terraform plan'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 script {
-                    sh 'terraform apply'
+                    sh 'terraform apply --auto-approve'
                 }
             }
         }    
